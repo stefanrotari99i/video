@@ -1,10 +1,10 @@
 import "./globals.css";
 
-import { Inter } from "next/font/google";
-import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next";
+import { Jost } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jost.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
